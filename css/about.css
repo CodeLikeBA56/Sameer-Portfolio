@@ -1,0 +1,10 @@
+.about-text {
+    line-height: 1.6;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--secondary-text-color);
+}
+  
+.about-text p { 
+    margin-bottom: 15px; 
+}

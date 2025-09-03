@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sameer Shamshad's Porfolio</title>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&" />
+  <link rel="stylesheet" href="./css/sidebar.css">
+  <link rel="stylesheet" href="./css/contact.css">
+  <link rel="stylesheet" href="./css/resume.css">
+  <link rel="stylesheet" href="./css/navbar.css">
+  <link rel="stylesheet" href="./css/about.css">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <aside class="sidebar">
+    <div class="sidebar-info">
+      <figure class="avatar-box">
+        <img src="./images/my-avatar.png" alt="Sameer Shamshad" width="80">
+      </figure>
+
+      <div class="info-content">
+        <h1 class="name" title="Sameer Shamshad">Sameer Shamshad</h1>
+        <p class="title">Web developer</p>
+      </div>
+
+      <button type="button" class="info_more-btn" data-sidebar-btn>
+        <span>Show Contacts</span>
+        <ion-icon name="chevron-down"></ion-icon>
+      </button>
+
+    </div>
+
+    <ul class="contacts-list">
+      <li class="contact-item">
+        <div class="icon-box">
+          <ion-icon name="mail-outline"></ion-icon>
+        </div>
+
+        <div class="contact-info">
+          <p class="contact-title">Email</p>
+          <a href="mailto:sameershamshad.42@gmail.com" class="contact-link">sameershamshad.42@...</a>
+        </div>
+      </li>
+
+      <li class="contact-item">
+        <div class="icon-box">
+          <ion-icon name="phone-portrait-outline"></ion-icon>
+        </div>
+
+        <div class="contact-info">
+          <p class="contact-title">Phone</p>
+          <a href="tel:+923361786143" class="contact-link">+92 336 1786143</a>
+        </div>
+      </li>
+
+      <li class="contact-item">
+        <div class="icon-box">
+          <ion-icon name="calendar-outline"></ion-icon>
+        </div>
+
+        <div class="contact-info">
+          <p class="contact-title">Birthday</p>
+          <time datetime="1982-06-23">July 04, 2002</time>
+        </div>
+      </li>
+
+      <li class="contact-item">
+        <div class="icon-box">
+          <ion-icon name="location-outline"></ion-icon>
+        </div>
+
+        <div class="contact-info">
+          <p class="contact-title">Location</p>
+          <address>Kamoke, Pakistan</address>
+        </div>
+      </li>
+    </ul>
+
+    <ul class="social-list">
+      <li class="social-item">
+        <a class="social-link" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/sameer-shamshad/">
+          <ion-icon name="logo-linkedin"></ion-icon>
+        </a>
+      </li>
+
+      <li class="social-item">
+        <a class="social-link" target="_blank" rel="noopener noreferrer" href="https://github.com/CodeLikeBA56">
+          <ion-icon name="logo-github"></ion-icon>
+        </a>
+      </li>
+
+      <li class="social-item">
+        <a class="social-link" target="_blank" rel="noopener noreferrer" href="#">
+          <ion-icon name="logo-instagram"></ion-icon>
+        </a>
+      </li>
+    </ul>
+
+    <button type="button" class="download-cv" id="download-cv-btn">
+      <span class="material-symbols-outlined" id="download-cv-icon">download</span>
+      <span>Download CV</span>
+    </button>
+  </aside>
+
+  <main class="main-content" id="main-content">
+    <nav class="navbar">
+      <span class="logo">SR</span>
+
+      <ul class="nav-links">
+        <li><a href="#about" class="link active">About</a></li>
+        <li><a href="#resume" class="link">Resume</a></li>
+        <li><a href="#projects" class="link">Projects</a></li>
+        <li><a href="#contact" class="link">Contact</a></li>
+      </ul>
+
+      <button type="button" id="dark-mode-btn">
+        <span class="material-symbols-outlined" id="dark-mode-icon">dark_mode</span>
+      </button>
+
+      <button type="button" id="menu-btn">
+        <span class="material-symbols-outlined" id="menu-icon">menu</span>
+      </button>
+    </nav>
+
+    <section id="about">
+      <header>
+        <h2 class="article-title">About Me</h2>
+      </header>
+
+      <article class="about-text">
+        <p>
+          I’m a MERN Stack Software Engineer from Lahore, Pakistan, working in web development. I enjoy turning complex
+          problems into simple, beautiful, and easy-to-understand designs.
+        </p>
+
+        <p>
+          My job is to build websites that are functional, user-friendly, and attractive. I add a personal touch to
+          every project, making it eye-catching, simple to use, and easy to understand. My goal is to present your
+          message and identity in the most creative way. Wanna review my projects?
+        </p>
+      </article>
+    </section>
+
+    <section id="resume">
+      <header>
+        <h2 class="article-title">Resume</h2>
+      </header>
+
+      <main class="timeline">
+        <div class="title-wrapper">
+          <div class="icon-box">
+            <ion-icon name="book-outline"></ion-icon>
+          </div>
+
+          <h3 class="timeline-title">Education</h3>
+        </div>
+
+        <ol class="timeline-list">
+          <li class="timeline-item">
+            <h4 class="timeline-item-title">Bachelor's Degree</h4>
+
+            <span>2021 — 2025</span>
+
+            <p class="timeline-text">
+              Graduated in 
+              <span class="highlighted-timline-text">BS Software Engineering</span>
+              from 
+              <a href="" >Gift University</a>
+              , Gujranwala.
+            </p>
+          </li>
+          
+          <li class="timeline-item">
+            <h4 class="h4 timeline-item-title">Intermediate</h4>
+            
+            <span>2019 — 2021</span>
+            
+            <p class="timeline-text">
+              Completed  
+              <span class="highlighted-timline-text">FS.C Pre Engineering</span>
+              from 
+              <a href="" >Aspire Group of Colleges</a>
+              , Kamoke.
+            </p>
+          </li>
+          
+          <li class="timeline-item">
+            <h4 class="h4 timeline-item-title">Matric</h4>
+            
+            <span>2017 — 2019</span>
+            
+            <p class="timeline-text">
+              Completed  
+              <span class="highlighted-timline-text">Matric in Bio</span>
+              from 
+              <a href="" >The Educator School</a>
+              , Kamoke.
+            </p>
+          </li>
+        </ol>
+      </main>
+
+      <h2 class="skills-title">Skills</h2>
+
+      <main class="technical-skills">
+        <details class="skills-group-container">
+          <summary class="grouped-skills-header">
+            <span class="material-symbols-outlined">data_object</span>
+            <div>
+              <h2>Frontend Development</h2>
+              <span>More than 2 years of experience</span>
+            </div>
+            <span class="material-symbols-outlined drop-down-icon">arrow_drop_down</span>
+          </summary>
+          <ul class="skills-list">
+            <li class="skill">
+              <div class="skill-info">
+                <h3 class="skill-title">HTML5</h3>
+                <span class="skill-percentage">88%</span>
+              </div>
+
+              <progress value="88" max="100"></progress>
+            </li>
+
+            <li class="skill">
+              <div class="skill-info">
+                <h3 class="skill-title">React.js</h3>
+                <span class="skill-percentage">77%</span>
+              </div>
+
+              <progress value="77" max="100"></progress>
+            </li>
+
+            <li class="skill">
+              <div class="skill-info">
+                <h3 class="skill-title">Next.js</h3>
+                <span class="skill-percentage">46%</span>
+              </div>
+
+              <progress value="46" max="100"></progress>
+            </li>
+
+            <li class="skill">
+              <div class="skill-info">
+                <h3 class="skill-title">React Native</h3>
+                <span class="skill-percentage">66%</span>
+              </div>
+
+              <progress value="66" max="100"></progress>
+            </li>
+          </ul>
+        </details>
+        
+        <details class="skills-group-container">
+          <summary class="grouped-skills-header">
+            <span class="material-symbols-outlined">code</span>
+            <div>
+              <h2>Backend Development</h2>
+              <span>More than 3 years of experience</span>
+            </div>
+            <span class="material-symbols-outlined drop-down-icon">arrow_drop_down</span>
+          </summary>
+          <ul class="skills-list">
+            <li class="skill">
+              <div class="skill-info">
+                <h3 class="skill-title">Node.js</h3>
+                <span class="skill-percentage">70%</span>
+              </div>
+
+              <progress value="70" max="100"></progress>
+            </li>
+
+            <li class="skill">
+              <div class="skill-info">
+                <h3 class="skill-title">Express.js</h3>
+                <span class="skill-percentage">75%</span>
+              </div>
+
+              <progress value="75" max="100"></progress>
+            </li>
+
+            <li class="skill">
+              <div class="skill-info">
+                <h3 class="skill-title">Flask</h3>
+                <span class="skill-percentage">45%</span>
+              </div>
+
+              <progress value="45" max="100"></progress>
+            </li>
+
+            <li class="skill">
+              <div class="skill-info">
+                <h3 class="skill-title">Socket.io</h3>
+                <span class="skill-percentage">86%</span>
+              </div>
+
+              <progress value="86" max="100"></progress>
+            </li>
+
+            <li class="skill">
+              <div class="skill-info">
+                <h3 class="skill-title">Restful APIs</h3>
+                <span class="skill-percentage">77%</span>
+              </div>
+
+              <progress value="77" max="100"></progress>
+            </li>
+          </ul>
+        </details>
+        
+        <details class="skills-group-container">
+          <summary class="grouped-skills-header">
+            <span class="material-symbols-outlined">database</span>
+            <div>
+              <h2>Databases</h2>
+              <span>More than 1.5 years of experience</span>
+            </div>
+            <span class="material-symbols-outlined drop-down-icon">arrow_drop_down</span>
+          </summary>
+          <ul class="skills-list">
+            <li class="skill">
+              <div class="skill-info">
+                <h3 class="skill-title">MongoDB.js</h3>
+                <span class="skill-percentage">67%</span>
+              </div>
+
+              <progress value="67" max="100"></progress>
+            </li>
+
+            <li class="skill">
+              <div class="skill-info">
+                <h3 class="skill-title">Firebase</h3>
+                <span class="skill-percentage">45%</span>
+              </div>
+
+              <progress value="45" max="100"></progress>
+            </li>
+
+            <li class="skill">
+              <div class="skill-info">
+                <h3 class="skill-title">Firebase Authentication</h3>
+                <span class="skill-percentage">80%</span>
+              </div>
+
+              <progress value="80" max="100"></progress>
+            </li>
+          </ul>
+        </details>
+        
+        <details class="skills-group-container">
+          <summary class="grouped-skills-header">
+            <span class="material-symbols-outlined">palette</span>
+            <div>
+              <h2>Styling</h2>
+              <span>More than 1.5 years of experience</span>
+            </div>
+            <span class="material-symbols-outlined drop-down-icon">arrow_drop_down</span>
+          </summary>
+          <ul class="skills-list">
+            <li class="skill">
+              <div class="skill-info">
+                <h3 class="skill-title">CSS3</h3>
+                <span class="skill-percentage">77%</span>
+              </div>
+
+              <progress value="77" max="100"></progress>
+            </li>
+
+            <li class="skill">
+              <div class="skill-info">
+                <h3 class="skill-title">Tailwind CSS</h3>
+                <span class="skill-percentage">70%</span>
+              </div>
+
+              <progress value="70" max="100"></progress>
+            </li>
+
+            <li class="skill">
+              <div class="skill-info">
+                <h3 class="skill-title">CSS Module</h3>
+                <span class="skill-percentage">65%</span>
+              </div>
+
+              <progress value="65" max="100"></progress>
+            </li>
+
+            <li class="skill">
+              <div class="skill-info">
+                <h3 class="skill-title">Responsive Design</h3>
+                <span class="skill-percentage">80%</span>
+              </div>
+
+              <progress value="80" max="100"></progress>
+            </li>
+          </ul>
+        </details>
+        
+        <details class="skills-group-container">
+          <summary class="grouped-skills-header">
+            <span class="material-symbols-outlined">deployed_code</span>
+            <div>
+              <h2>Tools</h2>
+              <span>More than 1.5 years of experience</span>
+            </div>
+            <span class="material-symbols-outlined drop-down-icon">arrow_drop_down</span>
+          </summary>
+          <ul class="skills-list">
+            <li class="skill">
+              <div class="skill-info">
+                <h3 class="skill-title">Git</h3>
+                <span class="skill-percentage">33%</span>
+              </div>
+
+              <progress value="33" max="100"></progress>
+            </li>
+
+            <li class="skill">
+              <div class="skill-info">
+                <h3 class="skill-title">Github</h3>
+                <span class="skill-percentage">56%</span>
+              </div>
+
+              <progress value="56" max="100"></progress>
+            </li>
+
+            <li class="skill">
+              <div class="skill-info">
+                <h3 class="skill-title">Postman</h3>
+                <span class="skill-percentage">83%</span>
+              </div>
+
+              <progress value="83" max="100"></progress>
+            </li>
+
+            <li class="skill">
+              <div class="skill-info">
+                <h3 class="skill-title">Thunder Client</h3>
+                <span class="skill-percentage">79%</span>
+              </div>
+
+              <progress value="79" max="100"></progress>
+            </li>
+          </ul>
+        </details>
+
+      </main>
+
+    </section>
+
+    <section id="projects">
+      <header>
+        <h2 class="article-title">Projects</h2>
+      </header>
+
+      <p>Showcase of your work...</p>
+    </section>
+
+    <section id="contact">
+      <header class="contact-header">
+        <h2 class="article-title">Contact</h2>
+      </header>
+
+      <div class="contact-form-wrapper">
+        <header>Contact Form</header>
+        <form data-form>
+          <div class="two-column-grid">
+            <div class="input-wrapper">
+              <label for="name">Full name</label>
+              <input 
+                id="name"
+                type="text" 
+                name="full-name" 
+                autocomplete="off"
+                class="form-input" 
+                placeholder="Enter your name here" 
+                data-form-input
+                required
+              >
+            </div>
+  
+            <div class="input-wrapper">
+              <label for="email">Email</label>
+              <input 
+                id="email"
+                type="email" 
+                name="email" 
+                class="form-input"
+                autocomplete="off"
+                placeholder="Enter your email here"
+                data-form-input
+                required
+                >
+              </div>
+            </div>
+            
+            <div class="input-wrapper">
+              <label for="message">Your Message</label>
+              <textarea 
+              id="message"
+              name="message" 
+              class="form-textarea" 
+              placeholder="Your Message" 
+              data-form-input
+              required 
+            ></textarea>
+          </div>
+
+          <button class="form-btn" type="button" onclick="sendEmail()" disabled data-form-btn>
+            <ion-icon name="paper-plane"></ion-icon>
+            <span>Send Message</span>
+          </button>
+        </form>
+      </div>
+
+      <footer>
+        <p>Copyright © 2025 | All Rights Reserved.</p>
+        <a href="#about">
+          <span class="material-symbols-outlined">north</span>
+        </a>
+      </footer>
+    </section>
+  </main>
+
+  <script src="./js//script.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function(){ emailjs.init({ publicKey: "FZLmraz64Z3C4k5Ko" }) })();
+  </script>
+</body>
+
+</html>

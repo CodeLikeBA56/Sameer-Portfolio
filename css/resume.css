@@ -1,0 +1,199 @@
+.timeline {
+    overflow: visible;
+}
+
+.timeline .title-wrapper {
+    gap: 15px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.timeline .title-wrapper .timeline-title{
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.title-wrapper .icon-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    border: 1px solid var(--main-color);
+    background: var(--secondary-bg-color);
+    box-shadow: 0 0 4px 1px var(--secondary-color);
+}
+
+.icon-box ion-icon {
+    font-size: 20px;
+    font-weight: 900;
+    color: var(--main-color);
+}
+
+.timeline-list {
+    font-size: 16px;
+    margin-left: 55px;
+}
+
+.timeline-item {
+    display: flex;
+    position: relative;
+    margin-bottom: 20px;
+    flex-direction: column;
+}
+
+.timeline-item::last-child { 
+    margin-bottom: 0; 
+}
+
+.timeline-item-title {
+  font-size: 18px;
+  margin-bottom: 7px;
+}
+
+.timeline-list span {
+    font-weight: 600;
+    color: var(--main-color);
+}
+
+.timeline-item:not(:last-child)::before {
+  content: "";
+  position: absolute;
+  top: -25px;
+  left: -30px;
+  width: 1px;
+  height: calc(100% + 50px);
+  background: var(--main-color);
+}
+
+.timeline-item::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: -34px;
+  height: 8px;
+  width: 8px;
+  background: var(--main-color);
+  border-radius: 50%;
+  box-shadow: 0 0 4px 2px var(--secondary-color);
+}
+
+.timeline-text {
+    margin-top: 6px;
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--secondary-text-color);
+}
+
+ol li .timeline-text .highlighted-timline-text {
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--text-color);
+}
+
+ol li .timeline-text a {
+    color: var(--main-color);
+    text-decoration: none;
+}
+
+/* Technical Skills CSS */
+
+.skills-title {
+    padding: 0px 0 20px;
+    font-size: 30px;
+}
+
+.technical-skills {
+    gap: 25px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.skills-group-container {
+    display: flex;
+    padding: 10px 20px;
+    height: max-content;
+    border-radius: 10px;
+    flex-direction: column;
+    border: 1px solid var(--border-color);
+}
+
+.skills-group-container .grouped-skills-header {
+    gap: 20px;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+}
+
+.grouped-skills-header .drop-down-icon {
+    margin-left: auto;
+}
+
+.grouped-skills-header div h2 {
+    font-size: 20px;
+    letter-spacing: 2px;
+    color: var(--text-color);
+}
+
+.skills-group-container[open] summary, .skills-group-container[open] summary div h2 {
+    color: var(--main-color);
+}
+
+.grouped-skills-header div span {
+    font-size: 12px;
+    color: var(--secondary-text-color);
+}
+
+.skills-group-container .skills-list {
+    padding: 10px 20px 0 40px;
+    list-style: none;
+}
+
+.skills-list .skill {
+    display: flex;
+    padding: 10px 0;
+    flex-direction: column;
+}
+
+.skills-list .skill .skill-info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+progress{
+    width: 100%;
+    height: 8px;
+    margin-top: 6px;
+    appearance: none;
+}
+
+progress::-webkit-progress-bar {
+    border-radius: 10px;
+    background-color: var(--secondary-bg-color);
+}
+
+  /* Achieved progress color (Chrome, Edge, Safari) */
+progress::-webkit-progress-value {
+    border-radius: 10px;
+    background-color: var(--main-color);
+}
+
+progress::-moz-progress-bar { /* Firefox */
+    border-radius: 10px;
+    background-color: var(--main-color);
+}
+
+@media screen and (max-width: 640px) {
+    .technical-skills {
+        gap: 15px;
+        grid-template-columns: 1fr;
+    }
+
+    .grouped-skills-header div h2 {
+        font-size: 14px;
+        letter-spacing: 1px;
+    }
+}

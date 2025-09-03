@@ -1,0 +1,108 @@
+:root {
+    --sidebar-width: 280px;
+    --text-color: #333;
+    --secondary-text-color: #666;
+    
+    --white-color: #fdfdfd;
+    --primary-bg-color: #fdfdfd;
+    --secondary-bg-color: #f2f2f7;
+    /* --main-color: #08a4a7; */
+    --main-color: #ffc461;
+    --secondary-color: #888;
+    --border-color: #888;
+    --shadow-color: rgba(0, 0, 0, .15);
+}
+
+.dark-mode {
+    --text-color: #fdfdfd;
+    --secondary-text-color: hsl(0, 0%, 84%);
+    
+    --primary-bg-color: hsl(0, 0%, 7%);
+    /* --secondary-bg-color: hsla(240, 1%, 17%, 0.75); */
+    --secondary-bg-color: hsl(240, 2%, 12%);
+    --border-color: hsl(0, 0%, 22%);
+    --shadow-color: rgba(255, 255, 255, .1);
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    height: 100dvh;
+    display: grid;
+    color: var(--text-color);
+    background-color: var(--primary-bg-color);
+    grid-template-columns: var(--sidebar-width) 1fr;
+}
+
+main {
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+main section {
+    padding: 30px;
+    min-height: 100vh;
+    min-height: 100dvh;
+}
+
+button {
+    height: 45px;
+    font-size: 16px;
+    width: max-content;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 8px;
+    background: transparent;
+    color: var(--text-color);
+}
+
+button span {
+    color: var(--text-color);
+}
+
+button ion-icon {
+    font-size: 20px;
+}
+
+.article-title {
+    font-size: 34px;
+    position: relative;
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+    text-transform: capitalize;
+}
+  
+.article-title::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 6px;
+    background: var(--main-color);
+    border-radius: 3px;
+}
+
+@media screen and (max-width: 640px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        height: max-content;
+    }
+
+    main section {
+        padding: 10px;
+    }
+}
