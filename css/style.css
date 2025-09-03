@@ -95,14 +95,37 @@ button ion-icon {
     border-radius: 3px;
 }
 
+.rotate-icon {
+    display: inline-block;
+    animation: spin 0.4s linear;
+}
+  
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    20% { transform: rotate(30deg); }
+    80% { transform: rotate(340deg); }
+    100% { transform: rotate(360deg); }
+}
+
+details summary .drop-down-icon {
+    transform: rotate(-135deg);
+    transition: transform .3s ease;
+}
+
+details[open] summary .drop-down-icon {
+    transform: rotate(0);
+}
+
 @media screen and (max-width: 640px) {
     body {
         display: flex;
-        flex-direction: column;
         height: max-content;
+        flex-direction: column;
     }
 
-    main section {
+    .main-content section {
+        width: 100vw;
         padding: 10px;
+        overflow-x: hidden;
     }
 }

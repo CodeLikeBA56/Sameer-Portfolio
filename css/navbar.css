@@ -46,3 +46,37 @@
 .navbar #menu-btn {
     display: none;
 }
+
+@media screen and (max-width: 500px) {
+    .navbar {
+        gap: 0px;
+        padding: 10px;
+        width: 100vw;
+        position: fixed;
+        top: 0;
+        left: 0;
+        border: none;
+        border-radius: 0;
+    }
+
+    .navbar .logo {
+        padding: 10px;
+        font-size: medium;
+        border-radius: 50% 36% 29% 50%;
+    }
+
+    .navbar .nav-links {
+        display: none;
+    }
+
+    .navbar #dark-mode-btn {
+        margin-left: auto;
+        margin-right: 0;
+        padding: 10px;
+    }
+    
+    .navbar #menu-btn {
+        padding: 10px;
+        display: flex;
+    }
+}

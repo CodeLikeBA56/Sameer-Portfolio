@@ -35,10 +35,7 @@ menuBtn.onclick = () => {
 };
 
 function updateMenuIcon() {
-  if (navbar.classList.contains('active'))
-    menuIcon.innerHTML = 'menu_open';
-  else
-    menuIcon.innerHTML = 'menu';
+  menuIcon.innerHTML = navbar.classList.contains('active') ? 'menu_open' : 'menu';
 }
 
 updateMenuIcon();
@@ -109,6 +106,8 @@ function sendEmail() {
       alert("Oops! Something went wrong. Try again later.");
     });
 }
+
+// window.location.href = "#projects";
 
 // // element toggle function
 // const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
