@@ -16,16 +16,16 @@
 }
 
 .project-title {
-    font-size: 16px;
+    font-size: 18px;
     color: var(--main-color);
 }
 
 .project-description {
-    font-size: 14px;
+    font-size: 15px;
     color: var(--secondary-text-color);
 }
 
-.project-features-detail {
+/* .project-features-detail {
     display: flex;
     flex-direction: column;
 }
@@ -34,10 +34,11 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
+} */
 
 .technologies-used {
     gap: 15px;
+    margin: 10px 0;
     display: flex;
     list-style: none;
     align-items: center;
@@ -88,7 +89,6 @@ body.dark-mode .technologies-used li .reinvert-technology-icon {
 .redirect-to-github {
     gap: 8px;
     padding: 8px;
-    margin-top: 10px;
     margin-left: auto;
     box-shadow: -2px -2px 4px -3px var(--text-color),
     inset -1px -1px 4px -3px var(--text-color);
@@ -100,11 +100,11 @@ body.dark-mode .technologies-used li .reinvert-technology-icon {
     }
 
     .project-title {
-        font-size: 14.5px;
+        font-size: 16px;
     }
     
     .project-description {
-        font-size: 13px;
+        font-size: 14px;
     }
 
     .technologies-used li {
