@@ -186,14 +186,26 @@ progress::-moz-progress-bar { /* Firefox */
     background-color: var(--main-color);
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 700px) {
     .technical-skills {
         gap: 15px;
         grid-template-columns: 1fr;
     }
 
     .grouped-skills-header div h2 {
-        font-size: 14px;
+        font-size: 18px;
         letter-spacing: 1px;
+    }
+
+    .skill-title {
+        font-size: 15px;
+    }
+
+    .skill-percentage {
+        font-size: 14px;
+    }
+
+    progress{
+        height: 6px;
     }
 }

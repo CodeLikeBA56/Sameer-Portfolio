@@ -117,9 +117,9 @@ details[open] summary .drop-down-icon {
     transform: rotate(0);
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1024px) {
     body {
-        padding-top: 60px;
+        padding-top: 65px;
         display: flex;
         height: max-content;
         flex-direction: column;
@@ -127,14 +127,14 @@ details[open] summary .drop-down-icon {
 
     .main-content section {
         width: 100vw;
-        padding: 10px;
+        padding: 80px 30px 10px;
         height: max-content;
         min-height: max-content;
         overflow-x: hidden;
     }
 }
 
-@media screen and (min-width: 500px) and (max-width: 640px) {
+@media screen and (min-width: 500px) and (max-width: 768px) {
     .main-content section {
         padding: 10px 20px;
         padding-top: 80px;

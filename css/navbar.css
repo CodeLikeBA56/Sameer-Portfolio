@@ -47,10 +47,10 @@
     display: none;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1023px) {
+@media screen and (min-width: 640px) and (max-width: 1023px) {
     .navbar {
         gap: 0px;
-        padding: 10px 20px;
+        padding: 10px 30px;
         width: 100vw;
         position: fixed;
         top: 0;
@@ -66,18 +66,24 @@
     }
 
     .navbar .nav-links {
-        display: none;
+        display: flex;
+        margin-left: auto;
     }
 
     .navbar #dark-mode-btn {
-        margin-left: auto;
+        margin-left: 10px;
         margin-right: 0;
         padding: 10px;
     }
     
     .navbar #menu-btn {
-        padding: 10px;
-        display: flex;
+        display: none;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .navbar {
+        padding: 10px 30px;
     }
 }
 
@@ -123,5 +129,11 @@
     .navbar #menu-btn {
         padding: 10px;
         display: flex;
+    }
+}
+
+@media screen and (min-width: 500px) and (max-width: 768px) {
+    .navbar {
+        padding: 10px 20px;
     }
 }
