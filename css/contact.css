@@ -139,6 +139,10 @@ footer a .material-symbols-outlined {
 }
 
 @media screen and (max-width: 640px) {
+    #contact {
+        padding-top: 70px;
+    }
+
     #contact .contact-header {
         padding: 10px;
     }
@@ -155,5 +159,15 @@ footer a .material-symbols-outlined {
 
     .skill-title {
         font-size: 14px;
+    }
+}
+
+@media screen and (min-width: 500px) and (max-width: 640px) {
+    #contact .contact-header {
+        padding: 20px;
+    }
+
+    .contact-form-wrapper {
+        padding: 0 20px 10px;
     }
 }

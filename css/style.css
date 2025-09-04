@@ -27,8 +27,9 @@
 *, *::before, *::after {
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
+    transition: all 0.5s ease;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
@@ -116,8 +117,9 @@ details[open] summary .drop-down-icon {
     transform: rotate(0);
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 1023px) {
     body {
+        padding-top: 60px;
         display: flex;
         height: max-content;
         flex-direction: column;
@@ -126,6 +128,22 @@ details[open] summary .drop-down-icon {
     .main-content section {
         width: 100vw;
         padding: 10px;
+        height: max-content;
+        min-height: max-content;
         overflow-x: hidden;
+    }
+}
+
+@media screen and (min-width: 500px) and (max-width: 640px) {
+    .main-content section {
+        padding: 10px 20px;
+        padding-top: 80px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .main-content section {
+        padding: 10px;
+        padding-top: 80px;
     }
 }

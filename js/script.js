@@ -6,9 +6,9 @@ let darkModeIcon = document.querySelector('#dark-mode-icon');
 
 function updateDarkModeIcon() {
   if (document.body.classList.contains('dark-mode'))
-    darkModeIcon.innerHTML = 'light_mode';
-  else
     darkModeIcon.innerHTML = 'dark_mode';
+  else
+    darkModeIcon.innerHTML = 'light_mode';
 }
 
 // On click toggle
@@ -28,6 +28,7 @@ updateDarkModeIcon();
 let navbar = document.querySelector('.navbar');
 let menuBtn = document.querySelector('#menu-btn');
 let menuIcon = document.querySelector('#menu-icon');
+let navbarLinks = document.querySelector("#nav-links-container");
 
 menuBtn.onclick = () => {
   navbar.classList.toggle('active');
@@ -35,7 +36,13 @@ menuBtn.onclick = () => {
 };
 
 function updateMenuIcon() {
-  menuIcon.innerHTML = navbar.classList.contains('active') ? 'menu_open' : 'menu';
+  if (navbar.classList.contains('active')) {
+    menuIcon.innerHTML = 'menu_open';
+    navbarLinks.style.right = "0%";
+  } else {
+    menuIcon.innerHTML = 'menu';
+    navbarLinks.style.right = "-100%";
+  }
 }
 
 updateMenuIcon();

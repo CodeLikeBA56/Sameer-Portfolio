@@ -1,5 +1,6 @@
 .sidebar {
     height: 100vh;
+    height: 100dvh;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -13,7 +14,6 @@
     position: relative;
     align-items: center;
     flex-direction: column;
-    border-bottom: 1px solid var(--border-color);
 }
 
 .sidebar-info .avatar-box {
@@ -68,6 +68,8 @@
     flex-direction: column;
     padding: 40px 0px;
     list-style: none;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
 }
 
 .contact-item {
@@ -109,15 +111,20 @@
 
 /* Contact list Styling */
 
+.social-link-wrapper {
+    gap: 40px;
+    display: flex;
+    padding: 40px 0px;
+    flex-direction: column;
+    /* border: 1px solid red; */
+}
+
 .social-list {
     gap: 20px;
     display: flex;
-    padding: 40px 0px;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
     list-style: none;
-    border-top: 1px solid var(--border-color);
 }
 
 .social-item a {
@@ -144,4 +151,44 @@
     background: var(--main-color);
     box-shadow: -2px -2px 4px -3px var(--text-color),
     inset -1px -1px 4px -3px var(--text-color);
+}
+
+@media screen and (max-width: 640px) {
+    .sidebar {
+        padding: 0 10px;
+        border-right: none;
+        height: max-content;
+    }
+    
+    .social-link-wrapper {
+        gap: 20px 18px;
+        display: flex;
+        padding: 18px 0px 0;
+        flex-direction: column;
+    }
+
+    .contacts-list {
+        gap: 15px;
+        padding: 15px 0px;
+    }
+
+    .contact-info a, .contact-info time, .contact-info address {
+        font-size: 13px;
+    }
+
+    .social-list {
+        gap: 20px;
+        display: flex;
+    }
+}
+
+@media screen and (min-width: 500px) and (max-width: 640px) {
+    .sidebar {
+        padding: 0 20px;
+    }
+
+    .social-link-wrapper {
+        flex-direction: row;
+        justify-content: space-between;
+    }
 }

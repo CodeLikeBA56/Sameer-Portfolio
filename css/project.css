@@ -1,7 +1,7 @@
 #projects main {
     gap: 25px;
+    width: 100%;
     display: grid;
-    width: max-content;
     place-items: start;
     grid-template-columns: 1fr 1fr 1fr;
 }
@@ -24,17 +24,6 @@
     font-size: 15px;
     color: var(--secondary-text-color);
 }
-
-/* .project-features-detail {
-    display: flex;
-    flex-direction: column;
-}
-
-.project-features-detail summary {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-} */
 
 .technologies-used {
     gap: 15px;
@@ -96,15 +85,21 @@ body.dark-mode .technologies-used li .reinvert-technology-icon {
 
 @media screen and (max-width: 700px) {
     #projects main {
+        gap: 15px;
+        place-items: center;
         grid-template-columns: 1fr;
     }
 
+    .project-container {
+        max-width: 400px;
+    }
+
     .project-title {
-        font-size: 16px;
+        font-size: 20px;
     }
     
     .project-description {
-        font-size: 14px;
+        font-size: 16px;
     }
 
     .technologies-used li {
@@ -121,6 +116,12 @@ body.dark-mode .technologies-used li .reinvert-technology-icon {
         position: absolute;
         top: 45px;
         left: 50%;
-        font-size: 10px;
+        font-size: 11px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .project-container {
+        max-width: 350px;
     }
 }
