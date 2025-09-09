@@ -4,6 +4,7 @@
     padding: 20px;
     display: flex;
     flex-direction: column;
+    border-right: 1px solid var(--border-color);
 }
 
 .sidebar-info {
@@ -150,6 +151,12 @@
     background: var(--main-color);
     box-shadow: -2px -2px 4px -3px var(--text-color),
     inset -1px -1px 4px -3px var(--text-color);
+}
+
+@media screen and (max-width: 1024px) {
+    .sidebar {
+        border-right: none;
+    }
 }
 
 @media screen and (max-width: 640px) {
