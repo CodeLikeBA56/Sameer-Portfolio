@@ -35,6 +35,16 @@ export default [
       github: "https://github.com/CodeLikeBA56/Hospital-Management-System"
     },
     {
+      title: "Optimal Path Finder",
+      description: "A dynamic graph visualization tool implementing BFS, DFS, and UCS algorithms. Users can create, edit, and connect nodes, visualize paths, and find the shortest or critical paths with detailed cost analysis.",
+      technologies: [
+        { name: "HTML5", icon: "./Tech Logo/w3_html5-icon.svg" },
+        { name: "CSS3", icon: "./Tech Logo/w3_css-icon.svg" },
+        { name: "Js", icon: "./Tech Logo/javascript-icon.svg" },
+      ],
+      github: "https://github.com/CodeLikeBA56/Optimal-Path-Finder"
+    },
+    {
       title: "Library Management System",
       description: "A Java-based backend project for managing books, users, and transactions as part of a DSA course.",
       technologies: [
@@ -43,11 +53,11 @@ export default [
       github: "https://github.com/CodeLikeBA56/Library-Management-System"
     },
     {
-        title: "Data Structure Implementations",
-        description: "Manual implementations of core Data Structures in Java such as LinkedList, Stack, Queue, Priority Queue, Binary Search Tree, and more to strengthen DSA and OOP concepts.",
-        technologies: [
-          { name: "Java", icon: "./Tech Logo/java-icon.svg" }
-        ],
-        github: "https://github.com/CodeLikeBA56/Custom-Data-Structures-Implementation"
-      }
+      title: "Data Structure Implementations",
+      description: "Manual implementations of core Data Structures in Java such as LinkedList, Stack, Queue, Priority Queue, Binary Search Tree, and more to strengthen DSA and OOP concepts.",
+      technologies: [
+        { name: "Java", icon: "./Tech Logo/java-icon.svg" }
+      ],
+      github: "https://github.com/CodeLikeBA56/Custom-Data-Structures-Implementation"
+    }
 ];
