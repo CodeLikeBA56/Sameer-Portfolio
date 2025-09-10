@@ -96,23 +96,59 @@ function sendEmail() {
     alert("Please fill in all fields.");
     return;
   }
-
+  
   const serviceId = "service_gasm89q";
   const templateId = "template_ztctj1z";
   const params = { name, email, message };
   
   emailjs.send(serviceId, templateId, params)
-    .then(res => {
-      alert("Message sent successfully!");
-      senderName.value = "";
-      senderEmail.value = "";
-      senderMessage.value = "";
-    })
-    .catch(error => {
-      console.error("EmailJS error:", error);
-      alert("Oops! Something went wrong. Try again later.");
-    });
+  .then(res => {
+    alert("Message sent successfully!");
+    senderName.value = "";
+    senderEmail.value = "";
+    senderMessage.value = "";
+  })
+  .catch(error => {
+    console.error("EmailJS error:", error);
+    alert("Oops! Something went wrong. Try again later.");
+  });
 }
+
+/*========== Display Projects ==========*/
+import projects from './projects.js';
+
+const projectList = document.getElementById("project-list");
+
+projects.forEach(project => {
+  const article = document.createElement("article");
+  article.classList.add("project-container");
+
+  article.innerHTML = `
+    <h4 class="project-title">${project.title}</h4>
+    <p class="project-description">${project.description}</p>
+    <ul class="technologies-used">
+      ${project.technologies.map(tech => `
+        <li>
+          <span class="technology-name">${tech.name}</span>
+          <img src="${tech.icon}" 
+               title="${tech.name}" 
+               class="${tech.invert ? "invert-technology-icon" : tech.reinvert ? "reinvert-technology-icon" : ""}">
+        </li>
+      `).join('')}
+    </ul>
+    <div class="actions">
+      <a href="${project.github}" 
+         class="redirect-to-github" 
+         target="_blank" rel="noopener noreferrer">
+        <ion-icon name="logo-github"></ion-icon>
+        <span>Source Code</span>
+      </a>
+    </div>
+  `;
+
+  projectList.appendChild(article);
+});
+
 
 // window.location.href = "#projects";
 

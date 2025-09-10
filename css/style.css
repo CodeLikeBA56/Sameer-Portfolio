@@ -9,7 +9,7 @@
     /* --main-color: #08a4a7; */
     --main-color: #ffc461;
     --secondary-color: #888;
-    --border-color: #888;
+    --border-color: hsl(0, 0%, 84%);
     --shadow-color: rgba(0, 0, 0, .15);
 }
 

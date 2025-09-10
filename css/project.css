@@ -9,12 +9,14 @@
 
 .project-container {
     padding: 15px;
+    height: 100%;
     max-width: 350px;
     border-radius: 10px;
     background: var(--secondary-bg-color);
     gap: 10px;
     display: flex;
     flex-direction: column;
+    border: 1px solid var(--border-color);
 }
 
 .project-title {
@@ -32,6 +34,7 @@
     margin: 10px 0;
     display: flex;
     list-style: none;
+    margin-top: auto;
     align-items: center;
     align-self: flex-end;
 }
@@ -79,8 +82,15 @@ body.dark-mode .technologies-used li .reinvert-technology-icon {
 
 .redirect-to-github {
     gap: 8px;
-    padding: 8px;
+    width: max-content;
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    height: 45px;
     margin-left: auto;
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--text-color);
     box-shadow: -2px -2px 4px -3px var(--text-color),
     inset -1px -1px 4px -3px var(--text-color);
 }
