@@ -72,6 +72,11 @@ const form = document.querySelector("[data-form]");
 const formInputs = document.querySelectorAll("[data-form-input]");
 const formBtn = document.querySelector("[data-form-btn]");
 
+formBtn.onclick = function (event) {
+  event.preventDefault();
+  sendEmail();
+};
+
 for (let i = 0; i < formInputs.length; i++) { // add event to all form input field
   formInputs[i].addEventListener("input", function () {
     if (form.checkValidity()) // check form validation
