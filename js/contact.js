@@ -34,7 +34,7 @@ function sendEmail() {
     return;
   }
   
-  const serviceId = "service_gasm89q";
+  const serviceId = "service_1n4xwaq";
   const templateId = "template_ztctj1z";
   const params = { name, email, message };
   
