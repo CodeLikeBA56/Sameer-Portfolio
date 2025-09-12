@@ -96,7 +96,7 @@ function sendEmail() {
   const name = senderName.value.trim();
   const email = senderEmail.value.trim();
   const message = senderMessage.value.trim();
-  console.log("Entered")
+  
   if (!name || !email || !message) {
     alert("Please fill in all fields.");
     return;
@@ -106,7 +106,7 @@ function sendEmail() {
   const templateId = "template_ztctj1z";
   const params = { name, email, message };
   
-  emailjs.send(serviceId, templateId, params)
+  emailjs.send(serviceId, templateId, params, "FZLmraz64Z3C4k5Ko")
   .then(res => {
     alert("Message sent successfully!");
     senderName.value = "";
