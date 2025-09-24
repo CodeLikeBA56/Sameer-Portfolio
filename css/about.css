@@ -5,8 +5,9 @@
     color: var(--secondary-text-color);
 }
   
-.about-text p { 
-    margin-bottom: 15px; 
+.about-text p {
+    margin: 0px 0 15px;
+    font-size: 16.5px;
 }
 
 .service {
@@ -44,7 +45,31 @@
     font-size: 15px;
 }
 
+.intro .name {
+    padding: 0;
+    font-size: 5rem;
+    margin: -20px 0 -18px;
+    color: var(--main-color);
+}
+.intro .title {
+    gap: 5px;
+    display: flex;
+    align-items: baseline;
+}
+
+.intro h3 {
+    font-weight: 600;
+    font-size: 1.6rem;
+    margin: 10px 0;
+    color: var(--text-color);
+}
+
 @media screen and (min-width: 900px) and (max-width: 1200px) {
+    .about-text p {
+        margin: 0px 0 15px;
+        font-size: 16px;
+    }
+
     .service-list {
         gap: 30px;
     }
@@ -68,9 +93,23 @@
 }
 
 @media screen and (max-width: 900px) {
+    .intro .name {
+        font-size: 3.1rem;
+        margin: -20px 0 -20px;
+    }
+
+    .intro h3 {
+        font-size: 1.3rem;
+    }
+
     .service-list {
         gap: 15px;
         grid-template-columns: 1fr;
+    }
+
+    .about-text p {
+        margin: 0px 0 10px;
+        font-size: 15px;
     }
 
     .service-item {

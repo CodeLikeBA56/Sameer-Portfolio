@@ -53,6 +53,7 @@ let navLinks = document.querySelectorAll('main nav ul li a');
 let main = document.querySelector('#main-content');
 
 main.onscroll = () => {
+  if (window.innerWidth <= 1024) return;
   let top = main.scrollTop;
   sections.forEach(sec => {
     let offset = sec.offsetTop - 150;
@@ -66,6 +67,35 @@ main.onscroll = () => {
   });
 };
 
+window.onscroll = () => {
+  if (window.innerWidth > 1024) return;
+  let top = window.scrollY;
+  sections.forEach(sec => {
+    let offset = sec.offsetTop - 150;
+    let height = sec.offsetHeight;
+    let id = sec.getAttribute('id');
+    
+    if (top >= offset && top < offset + height) {
+      navLinks.forEach(link => link.classList.remove('active'));
+      document.querySelector('main nav ul li a[href*="' + id + '"]').classList.add('active');
+    }
+  });
+};
+
+/*========== Display Projects ==========*/
+
+const downloadBtn = document.getElementById("download-cv-btn");
+  const filePath = "../Assets/Sameer Shamshad Resume.pdf";
+
+  downloadBtn.addEventListener("click", () => {
+    const link = document.createElement("a");
+    link.href = filePath;
+    link.download = "Sameer-Shamshad-Resume.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  });
+
 /*========== Display Projects ==========*/
 import projects from './projects.js';
 
@@ -78,6 +108,7 @@ projects.forEach(project => {
   article.innerHTML = `
     <h4 class="project-title">${project.title}</h4>
     <p class="project-description">${project.description}</p>
+    <p class="project-timeline">${formatTimeline(project.timeline.start, project.timeline.end)}</p>
     <ul class="technologies-used">
       ${project.technologies.map(tech => `
         <li>
@@ -101,6 +132,12 @@ projects.forEach(project => {
   projectList.appendChild(article);
 });
 
+function formatTimeline(start, end) {
+  const options = { month: "2-digit", year: "numeric" };
+  const startStr = start.toLocaleDateString("en-US", options).replace(",", "");
+  const endStr = end.toLocaleDateString("en-US", options).replace(",", "");
+  return `${startStr} - ${endStr}`;
+}
 
 // window.location.href = "#projects";
 
