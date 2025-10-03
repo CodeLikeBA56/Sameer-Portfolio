@@ -20,6 +20,8 @@ darkModeBtn.onclick = () => {
 // Set default based on system preference
 if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
   document.body.classList.add('dark-mode');
+} else {
+  document.body.classList.add('dark-mode');
 }
 
 updateDarkModeIcon();
@@ -106,9 +108,14 @@ projects.forEach(project => {
   article.classList.add("project-container");
 
   article.innerHTML = `
-    <h4 class="project-title">${project.title}</h4>
+    <div class="project-header">
+      <h4 class="project-title">${project.title}</h4>
+      <button type="button" class="preview-btn">
+        <span class="material-symbols-outlined">visibility</span>
+      </button>
+    </div>
     <p class="project-description">${project.description}</p>
-    <p class="project-timeline">${formatTimeline(project.timeline.start, project.timeline.end)}</p>
+    <p class="project-timeline ${project?.timeline?.end ? '' : 'active' } ">${formatTimeline(project.timeline.start, project.timeline.end)}</p>
     <ul class="technologies-used">
       ${project.technologies.map(tech => `
         <li>
@@ -120,6 +127,11 @@ projects.forEach(project => {
       `).join('')}
     </ul>
     <div class="actions">
+      <a href="${project.url}" 
+         class="redirect-to-live-demo" 
+         target="_blank" rel="noopener noreferrer">
+        <span>Live Demo</span>
+      </a>
       <a href="${project.github}" 
          class="redirect-to-github" 
          target="_blank" rel="noopener noreferrer">
@@ -132,10 +144,10 @@ projects.forEach(project => {
   projectList.appendChild(article);
 });
 
-function formatTimeline(start, end) {
+function formatTimeline(start, end = "") {
   const options = { month: "2-digit", year: "numeric" };
   const startStr = start.toLocaleDateString("en-US", options).replace(",", "");
-  const endStr = end.toLocaleDateString("en-US", options).replace(",", "");
+  const endStr = end ? end.toLocaleDateString("en-US", options).replace(",", "") : "Now*";
   return `${startStr} - ${endStr}`;
 }
 

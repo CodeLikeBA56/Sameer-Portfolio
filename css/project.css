@@ -4,24 +4,64 @@
     display: grid;
     place-items: start;
     grid-template-columns: repeat(auto-fit, minmax(300px, 350px));
-  }
-  
+}  
 
 .project-container {
-    padding: 15px;
     height: 100%;
+    padding: 15px;
     max-width: 350px;
-    border-radius: 10px;
-    background: var(--secondary-bg-color);
     gap: 10px;
     display: flex;
     flex-direction: column;
+    border-radius: 10px;
+    background: var(--secondary-bg-color);
     border: 1px solid var(--border-color);
+}
+
+.project-container:hover {
+    border-color: var(--main-color);
+}
+
+.project-container:hover {
+    border-color: var(--main-color);
+}
+
+.project-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .project-title {
     font-size: 18px;
     color: var(--main-color);
+}
+
+.preview-btn {
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    position: relative;
+}
+
+.project-btn::before {
+    content: "Preview";
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    pointer-events: none;
+    transition: border-color 0.3s ease;
+}
+
+.preview-btn:hover span {
+    transform: scale(1.1);
+    color: var(--main-color);
+    border-bottom: 1px solid var(--main-color);
 }
 
 .project-description {
@@ -37,6 +77,16 @@
     letter-spacing: 1.2px;
     align-self: flex-end;
     color: var(--secondary-text-color);
+}
+
+.project-timeline.active {
+    margin-top: auto;
+    font-size: 13px;
+    font-weight: 400;
+    font-style: italic;
+    letter-spacing: 1.2px;
+    align-self: flex-end;
+    color: var(--main-color);
 }
 
 .technologies-used {
@@ -63,8 +113,8 @@
 }
 
 .technologies-used li img {
-    width: 30px;
-    height: 30px;
+    width: 31px;
+    height: 31px;
     border-radius: 50px;   
     object-fit: contain;
 }
@@ -89,14 +139,19 @@ body.dark-mode .technologies-used li .reinvert-technology-icon {
     transform: translateX(-50%);
 }
 
-.redirect-to-github {
+.actions {
+    display: flex;
+    align-items: center;
+    margin-top: 12px;
+    justify-content: flex-end;
+}
+
+.redirect-to-live-demo, .redirect-to-github {
     gap: 8px;
     display: flex;
     align-items: center;
     width: max-content;
     height: 45px;
-    margin-top: 12px;
-    margin-left: auto;
     padding: 8px 12px;
     border-radius: 8px;
     text-decoration: none;
@@ -105,7 +160,11 @@ body.dark-mode .technologies-used li .reinvert-technology-icon {
     inset -1px -1px 4px -3px var(--text-color);
 }
 
-.redirect-to-github[href=""] {
+.redirect-to-live-demo {
+    margin-right: auto;
+}
+
+.redirect-to-live-demo[href=""], .redirect-to-github[href=""] {
     display: none;
 }
 
