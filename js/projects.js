@@ -24,6 +24,16 @@ export default [
       { name: "Flask", icon: "./Tech Logo/palletsprojects_flask-icon.svg" },
       { name: "Socket.io", icon: "./Tech Logo/socketio-icon.svg", invert: true }
     ],
+    screenshots: [
+      "../Assets/Projects/AI-Powered-SkillSwap-Network/1. Home.jpg",
+      "../Assets/Projects/AI-Powered-SkillSwap-Network/2. Login.jpg",
+      "../Assets/Projects/AI-Powered-SkillSwap-Network/3. Register.jpg",
+      "../Assets/Projects/AI-Powered-SkillSwap-Network/4. Dashboard.jpg",
+      "../Assets/Projects/AI-Powered-SkillSwap-Network/5. Create-Post.jpg",
+      "../Assets/Projects/AI-Powered-SkillSwap-Network/6. Post-Uploaded.jpg",
+      "../Assets/Projects/AI-Powered-SkillSwap-Network/7. Profile.jpg",
+      "../Assets/Projects/AI-Powered-SkillSwap-Network/8. Search.jpg",
+    ],
     url: "",
     github: "",
     category: "Final Year Project",

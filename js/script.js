@@ -100,22 +100,41 @@ const downloadBtn = document.getElementById("download-cv-btn");
 
 /*========== Display Projects ==========*/
 import projects from './projects.js';
-
 const projectList = document.getElementById("project-list");
+
+const modalOverlay = document.getElementById("modal-overlay");
+const modalTitle = document.getElementById("modal-project-title");
+const carousal = document.getElementById("carousal");
+const totalImages = document.getElementById("total-images");
+
+// Close modal when user clicks close button
+document.querySelector("[data-modal-close-btn]").addEventListener("click", () => {
+  modalOverlay.classList.remove("show");
+});
 
 projects.forEach(project => {
   const article = document.createElement("article");
   article.classList.add("project-container");
 
+  const showPreviewBtn = project.screenshots && project.screenshots.length > 0;
+  const hasLiveDemo = project.url && project.url.trim() !== "";
+  const hasGithub = project.github && project.github.trim() !== "";
+
   article.innerHTML = `
     <div class="project-header">
       <h4 class="project-title">${project.title}</h4>
-      <button type="button" class="preview-btn">
-        <span class="material-symbols-outlined">visibility</span>
-      </button>
+      ${showPreviewBtn ? `
+        <button type="button" class="preview-btn">
+          <span class="material-symbols-outlined">visibility</span>
+        </button>
+      ` : ""}
     </div>
+
     <p class="project-description">${project.description}</p>
-    <p class="project-timeline ${project?.timeline?.end ? '' : 'active' } ">${formatTimeline(project.timeline.start, project.timeline.end)}</p>
+    <p class="project-timeline ${project?.timeline?.end ? '' : 'active'}">
+      ${formatTimeline(project.timeline.start, project.timeline.end)}
+    </p>
+
     <ul class="technologies-used">
       ${project.technologies.map(tech => `
         <li>
@@ -126,22 +145,37 @@ projects.forEach(project => {
         </li>
       `).join('')}
     </ul>
+
     <div class="actions">
-      <a href="${project.url}" 
-         class="redirect-to-live-demo" 
-         target="_blank" rel="noopener noreferrer">
-        <span>Live Demo</span>
-      </a>
-      <a href="${project.github}" 
-         class="redirect-to-github" 
-         target="_blank" rel="noopener noreferrer">
-        <ion-icon name="logo-github"></ion-icon>
-        <span>Source Code</span>
-      </a>
+      ${hasLiveDemo ? `
+        <a href="${project.url}" class="redirect-to-live-demo" target="_blank" rel="noopener noreferrer">
+          <span>Live Demo</span>
+        </a>
+      ` : ""}
+      ${hasGithub ? `
+        <a href="${project.github}" class="redirect-to-github" target="_blank" rel="noopener noreferrer">
+          <ion-icon name="logo-github"></ion-icon>
+          <span>Source Code</span>
+        </a>
+      ` : `<p class="missing-info">The developer chose not to share the source code publicly.</p>`}
     </div>
   `;
 
-  projectList.appendChild(article);
+  projectList.appendChild(article); // Append to project list
+
+  if (showPreviewBtn) { // Add modal trigger logic
+    const previewBtn = article.querySelector(".preview-btn");
+    previewBtn.addEventListener("click", () => {
+      modalTitle.textContent = project.title; // Set project title in modal
+
+      carousal.innerHTML = project.screenshots.map(src => `
+        <img src="${src}" class="carousel-image" alt="${project.title} screenshot">
+      `).join(''); // Populate carousel with screenshots
+
+      totalImages.textContent = `1/${project.screenshots.length}`; // Set total images count
+      modalOverlay.classList.add("show"); // Show modal
+    });
+  }
 });
 
 function formatTimeline(start, end = "") {
@@ -152,6 +186,17 @@ function formatTimeline(start, end = "") {
 }
 
 // window.location.href = "#projects";
+
+/*========== Carousal Variables ==========*/
+const carousel = document.querySelector('#carousal');
+
+projects[1]?.screenshots?.forEach(ui => {
+  const img = document.createElement('img');
+  img.src = ui;
+  img.alt = "Project Screenshot";
+  img.classList.add('carousel-image');
+  carousel.appendChild(img);
+});
 
 // // element toggle function
 // const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }

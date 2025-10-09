@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="./css/navbar.css">
   <link rel="stylesheet" href="./css/about.css">
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/modal.css">
 </head>
 
 <body>
@@ -502,6 +503,25 @@
       <header>
         <h2 class="article-title">Projects</h2>
       </header>
+
+      <div class="modal-overlay" id="modal-overlay">
+        <div class="modal-container">
+          <header class="modal-header">
+            <button type="button" class="modal-close-btn" data-modal-close-btn>
+              <span class="material-symbols-outlined">close</span>
+            </button>
+            <h4 class="project-title" id="modal-project-title">Project-title</h4>
+          </header>
+      
+          <div class="carousal" id="carousal"></div>
+      
+          <div class="carousal-actions">
+            <button type="button"><</button>
+            <span id="total-images">1/8</span>
+            <button type="button">></button>
+          </div>
+        </div>
+      </div>      
 
       <main id="project-list"></main> <!-- Projects will be loaded here dynamically -->
     </section>
