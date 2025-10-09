@@ -1,0 +1,127 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    height: 100dvh;
+    opacity: 0;
+    visibility: hidden;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.modal-overlay.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal-container {
+    width: 100vw;
+    height: 100vh;
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    backdrop-filter: blur(2px);
+}
+
+.modal-header {
+    gap: 20px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    background: var(--secondary-bg-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.modal-header .modal-close-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.modal-header .modal-close-btn span {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.modal-header .modal-close-btn:hover {
+    background: var(--main-color);
+}
+
+.carousal {
+    width: 100%;
+    max-width: 870px;
+    display: flex;
+    overflow: hidden;
+    margin-top: auto;
+    align-self: center;
+    align-items: center;
+    background: transparent;
+    justify-content: flex-start;
+}
+
+.carousel-image {
+    width: 100%;
+    object-fit: contain;
+}
+
+.carousal-actions {
+    gap: 70px;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    margin-top: auto;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(3px);
+    border-top: 1px solid var(--border-color);
+    background-color: var(--secondary-bg-color);
+}
+
+#total-images {
+    font-size: 14px;
+    font-weight: 800;
+    border-radius: 10px;
+    letter-spacing: 5px;
+    color: var(--text-color);
+    padding: 10px 10px 10px 15px;
+    background-color: var(--border-color);
+}
+
+.carousal-actions button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    padding-bottom: 14px;
+    border: 1px solid var(--border-color);
+    background-color: var(--secondary-bg-color);
+}
+
+.carousal-actions button:first-child {
+    padding-right: 15px;
+}
+
+@media screen and (max-width: 500px) {
+    .modal-header {
+        gap: 10px;
+        padding: 15px 10px;
+    }
+
+    .modal-header .modal-close-btn {
+        width: 33px;
+        height: 33px;
+    }
+
+    .modal-header .modal-close-btn span {
+        font-size: 20px;
+    }
+
+    .carousal {
+        width: 100%;
+    }
+
+    .carousel-image {
+        width: 100%;
+    }
+}
